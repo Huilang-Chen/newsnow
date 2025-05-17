@@ -1,0 +1,8 @@
+<?php
+// Preserve the path and query string when redirecting:
+$target = 'https://newsnow-five-beta.vercel.app' . $_SERVER['REQUEST_URI'];
+
+// Send a 301 “Moved Permanently” header to search engines, browsers, etc.
+header("Location: $target", true, 301);
+exit;
+
